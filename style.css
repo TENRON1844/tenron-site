@@ -72,7 +72,6 @@ body {
 }
 
 #slide8 .card {
-  top: 58%;
   background: rgba(255, 255, 255, 0); /* transparent with slight glass effect */
   box-shadow: 0 0px 0px rgba(255, 255, 255, 0);
   color: #001986;
