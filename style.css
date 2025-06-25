@@ -30,7 +30,7 @@ body {
   width: 100%;
   scroll-snap-align: start;
   position: relative;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /* Slide-specific cards centered in the slide */
