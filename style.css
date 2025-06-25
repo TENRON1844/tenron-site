@@ -91,7 +91,7 @@ body {
 }
 
 #slide3 .card {
-   bottom: 150px;
+   bottom: 175px;
 }
 
 #slide5 .card {
@@ -114,7 +114,7 @@ body {
 /* Vertical navigation dots */
 .nav-dots {
   position: fixed;
-  top: 60%;
+  top: 55%;
   right: 20px;
   transform: translateY(-50%);
   display: flex;
