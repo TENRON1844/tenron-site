@@ -56,7 +56,7 @@ body {
 /* Card: blurred, curved info box pinned to bottom-left */
 .card {
   position: absolute;
-  bottom: 40px;
+  bottom: 80px;
   left: 40px;
   background: rgba(255, 255, 255, 0.274); /* transparent with slight glass effect */
   backdrop-filter: blur(15px);
