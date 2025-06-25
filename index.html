@@ -10,6 +10,10 @@
 
 <body>
 
+    <div id="loading-screen">
+  <div class="loader"></div>
+    </div>
+
   <!-- Navigation dots -->
   <div class="nav-dots">
     <a href="#slide1" class="dot active"></a>
@@ -161,6 +165,14 @@
       slides.forEach((slide) => observer.observe(slide));
     });
   </script>
+
+  <script>
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('loading-screen');
+    loader.classList.add('fade-out');
+  });
+</script>
+
 
 </body>
 </html>
