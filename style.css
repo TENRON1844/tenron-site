@@ -1,14 +1,14 @@
-/* Reset default spacing and layout */
+/* Reset defaults */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base layout settings */
-body, html {
-  scroll-behavior: smooth;
+/* Base layout */
+html, body {
   font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
   overflow-x: hidden;
   height: 100%;
 }
@@ -19,78 +19,82 @@ body {
   height: 100vh;
 }
 
-/* Each slide fills the screen with a background image */
+/* Slides */
 .slide {
-  background-color: #ffffff; /* fallback color (dark navy, like Isomatex) */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
   scroll-snap-align: start;
   position: relative;
   padding: 2rem;
-}
-
-#slide4 .card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-    background-color: #ffffff; /* fallback color (dark navy, like Isomatex) */
+  background-color: #ffffff;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  scroll-snap-align: start;
-  position: relative;
-  padding: 2rem;
 }
 
-#slide3 .card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 44vb;
-  transform: translate(-50%, -50%);
-    background-color: #ffffff; /* fallback color (dark navy, like Isomatex) */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  scroll-snap-align: start;
-  position: relative;
-  padding: 2rem;
-}
-
-/* Card: blurred, curved info box pinned to bottom-left */
+/* Card: default style */
 .card {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  background: rgba(255, 255, 255, 0.1); /* transparent with slight glass effect */
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
   padding: 2rem;
   border-radius: 20px;
   max-width: 480px;
+  width: clamp(280px, 80vw, 480px);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   color: #001986;
   text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  z-index: 2;
 }
 
-/* Headings inside card */
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom centered cards */
+#slide2 .card,
+#slide3 .card,
+#slide4 .card,
+#slide6 .card,
+#slide7 .card,
+#slide8 .card {
+  top: 50%;
+  left: 50%;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+
+/* Slide 8 special style */
+#slide8 .card {
+  top: 58%;
+  text-align: center;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  background: rgba(255, 255, 255, 0);
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Headings and text */
 .card h1,
 .card h2 {
   margin-bottom: 1.2rem;
   font-size: 1.6rem;
 }
 
-/* Paragraph text */
 .card p {
   font-size: 1rem;
   line-height: 1.8;
 }
 
-/* Vertical navigation dots */
+/* Nav dots */
 .nav-dots {
   position: fixed;
   top: 50%;
@@ -102,7 +106,7 @@ body {
   z-index: 999;
 }
 
-.nav-dots a {
+.nav-dots .dot {
   width: 12px;
   height: 12px;
   background-color: #ccc;
@@ -111,27 +115,81 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.nav-dots a.active,
-.nav-dots a:hover {
-  background-color: #0077b6;
+.nav-dots .dot.active,
+.nav-dots .dot:hover {
+  background-color: #001986;
 }
 
+/* Logo */
+.logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 180px;
+  height: auto;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+/* Gradient overlay top/bottom */
+.slide::before,
+.slide::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 200px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slide::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.slide::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+/* Hide scrollbar */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  scrollbar-width: none;
+}
+
+/* Mobile optimization */
 @media (max-width: 768px) {
   .card {
     bottom: 20px;
     left: 20px;
-    right: 20px; /* allow it to shrink inwards */
+    right: 20px;
     max-width: none;
+    width: auto;
     padding: 1.5rem;
     font-size: 0.95rem;
   }
-}
 
-body::-webkit-scrollbar {
-  display: none;
-}
+  .card h1,
+  .card h2 {
+    font-size: 1.3rem;
+  }
 
-/* For Firefox */
-body {
-  scrollbar-width: none;
+  .logo {
+    width: 120px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .nav-dots {
+    right: 10px;
+  }
+
+  .nav-dots .dot {
+    width: 10px;
+    height: 10px;
+  }
 }
