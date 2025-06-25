@@ -86,7 +86,7 @@ body {
 }
 
 #slide7 .card {
-   bottom: 250px;
+   bottom: 200px;
 }
 
 /* Headings inside card */
@@ -130,7 +130,7 @@ body {
 
 @media (max-width: 768px) {
   .card {
-    bottom: 140px;
+    bottom: 120px;
     left: 20px;
     right: 20px; /* allow it to shrink inwards */
     max-width: none;
