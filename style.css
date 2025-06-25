@@ -81,6 +81,14 @@ body {
   border-radius: 0;
 }
 
+#slide6 .card {
+   bottom: 200px;
+}
+
+#slide7 .card {
+   bottom: 250px;
+}
+
 /* Headings inside card */
 .card h1,
 .card h2 {
@@ -126,7 +134,7 @@ body {
     left: 20px;
     right: 20px; /* allow it to shrink inwards */
     max-width: none;
-    padding: 1.5rem;
+    padding: 0.8rem;
     font-size: 0.95rem;
   }
 }
