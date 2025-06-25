@@ -11,6 +11,7 @@ body, html {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   height: 100%;   
+  background-color: #000000;
 }
 
 body {
@@ -21,7 +22,7 @@ body {
 
 /* Each slide fills the screen with a background image */
 .slide {
-  background-color: #ffffff; /* fallback color (dark navy, like Isomatex) */
+  background-color: #000000; /* fallback color (dark navy, like Isomatex) */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -42,7 +43,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 70vw; /* fixed unit */
+  width: 80vw; /* fixed unit */
   transform: translate(-50%, -50%);
   background-size: cover;
   background-position: center;
