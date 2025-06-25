@@ -1,0 +1,137 @@
+/* Reset default spacing and layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base layout settings */
+body, html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+/* Each slide fills the screen with a background image */
+.slide {
+  background-color: #ffffff; /* fallback color (dark navy, like Isomatex) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+  padding: 2rem;
+}
+
+#slide4 .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    background-color: #ffffff; /* fallback color (dark navy, like Isomatex) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  scroll-snap-align: start;
+  position: relative;
+  padding: 2rem;
+}
+
+#slide3 .card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44vb;
+  transform: translate(-50%, -50%);
+    background-color: #ffffff; /* fallback color (dark navy, like Isomatex) */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  scroll-snap-align: start;
+  position: relative;
+  padding: 2rem;
+}
+
+/* Card: blurred, curved info box pinned to bottom-left */
+.card {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  background: rgba(255, 255, 255, 0.1); /* transparent with slight glass effect */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 480px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: #001986;
+  text-align: left;
+}
+
+/* Headings inside card */
+.card h1,
+.card h2 {
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+
+/* Paragraph text */
+.card p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Vertical navigation dots */
+.nav-dots {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 999;
+}
+
+.nav-dots a {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nav-dots a.active,
+.nav-dots a:hover {
+  background-color: #0077b6;
+}
+
+@media (max-width: 768px) {
+  .card {
+    bottom: 20px;
+    left: 20px;
+    right: 20px; /* allow it to shrink inwards */
+    max-width: none;
+    padding: 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: none;
+}

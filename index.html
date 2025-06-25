@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<hmtl lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> TENRON® – Marine Material Revolution </title>
+    <link rel="stylesheet" href="style.css" />
+    <link hred="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" href="style.css" >
+</head>
+
+<body>
+
+    
+
+
+    <div class="nav-dots">
+        <a href="#slide1" class="dot active"></a>
+        <a href="#slide2" class="dot"></a>
+        <a href="#slide3" class="dot"></a>
+         <a href="#slide4" class="dot"></a>
+         <a href="#slide5" class="dot"></a>
+         <a href="#slide6" class="dot"></a>
+        <a href="#slide7" class="dot"></a>
+         <a href="#slide8" class="dot"></a>
+    </div>
+
+
+
+
+    <section class="slide" id="slide1" style="background-image: url('https://www.isomatex.com/wp-content/uploads/2024/06/img_1430-1-scaled-e1719765163205-952x1024.jpeg')">
+        
+        <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
+
+        <div class="card">
+           
+            <h1>Meet TENRON®</h1>
+            
+            <p>The aerospace-grade mineral fiber Leading the New Material Revolution.</p>
+       
+        </div>
+
+    </section>
+
+    <section class="slide" id="slide2" style="background-image: url('https://www.isomatex.com/wp-content/uploads/2024/01/j-yeo-b50nv0yaqwe-unsplash-768x1024.jpg')"> 
+
+        <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
+
+        <div class="card">  
+
+            <h2> What is TENRON®? </h2>
+           
+            <p> 
+                <strong>TENRON®</strong> is a next-generation <strong>mineral-based fiber</strong> developed for extreme performance.
+                <br><br>
+                Unlike traditional fibers like glass or carbon, it’s made from <strong>non-organic minerals</strong> fused at high temperatures — producing filaments with exceptional strength and consistency.
+                <br><br>
+
+        </div>
+
+    </section>
+
+    <section class="slide" id="slide3" style="background-image: url('images/slide3.png.png')">  
+
+        <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
+
+        <div class="card">  
+        
+            <h2> Why TENRON®? </h2>
+       
+            <p> 
+                ✅ Lighter and stronger than carbon<br>
+                ✅ 3× more impact-resistant<br>
+                ✅ Fireproof up to 1300°C<br>
+                ✅ Quieter, smoother rides<br>
+                ✅ Eco-friendly and recyclable  
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="slide" id="slide4" style="background-image: url('images/slide4.png.png')">    
+        
+        <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
+
+        <div class="card">  
+        
+            <h2> Better Than the Rest </h2>
+
+            <p> 
+                Compared to:<br><br>
+                    ❌ Glass:<br>
+                    (heavier, weaker, not recyclable)<br>
+                    <br>
+                    ❌ Carbon: <br>
+                    (brittle, flammable, high CO₂)<br>
+                    <br>
+                    ✅ TENRON®: <br>
+                    (strong, safe, sustainable)   
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="slide" id="slide5" style="background-image: url('images/slide5.png.png')">
+        
+        <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
+        
+        <div class="card">  
+
+            <h2> Used in the Real World </h2>
+
+            <p> 
+                Trusted by Airbus.<br>
+                <br>
+                Built into racing boats, luxury yachts, and the OPEN60AAL Artic vessel.<br>    
+                <br>
+                TENRON® performs where others fail.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="slide dark" id="slide6" style="background-image: url('images/slide6.png.png')">  
+        
+        <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
+        
+        <div class="card">  
+
+            <h2> Sustainable by Design </h2>
+
+            <p>  
+                ♻️ Made with wind energy<br>
+                ♻️ Fully recyclable to original strength<br>
+                ♻️ Low CO₂ footprint – 10× lower than carbon<br>
+                ♻️ Built in Western Europe, REACH compliant
+            </p>
+
+        </div>
+        
+    </section>
+
+    <section class="slide" id="slide7" style="background-image: url('images/slide7.png.png')"> 
+        
+        <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
+        
+        <div class="card">  
+
+            <h2> Who is TENRON® For? </h2>
+
+            <p>  
+                🚤 Luxury yachts – comfort, fire safety<br>
+                ⛵ Racing boats –  shock resistance, speed<br>
+                🌊 Standard boats – durability, same cost
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="slide end" id="slide8" style="background-image: url('images/slide8.png.png')">  
+        
+        <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
+       
+        <div class="card">  
+            
+            <h2> Want to know more? </h2>
+
+            <p> Explore technical specs, datasheets, and performance data at: </p>
+            
+            <a href="https://www.isomatex.com" target="_blank" class="cta-button"> www.isomatex.com </a>
+
+        </div>
+
+    </section>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            } else {
+            entry.target.classList.remove('visible');
+            }
+        });
+        } , { threshold: 0.5 });
+
+        document.querySelectorAll('.card').forEach(card => {
+        observer.observe(card);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll(".slide");
+        const dots = document.querySelectorAll(".nav-dots .dot");
+
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                const currentId = entry.target.id;
+                dots.forEach((dot) => {
+                const targetId = dot.getAttribute("href").substring(1);
+                dot.classList.toggle("active", targetId === currentId);
+                });
+            }
+            });
+        },
+        { threshold: 0.5 }
+        );
+
+        slides.forEach((slide) => observer.observe(slide));
+        });
+    </script>
+
+</body>
+
+</hmtl>
