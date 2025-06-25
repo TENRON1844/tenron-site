@@ -37,6 +37,7 @@ body {
 #slide2 .card,
 #slide3 .card,
 #slide4 .card,
+#slide5 .card,
 #slide6 .card,
 #slide7 .card,
 #slide8 .card {
@@ -87,6 +88,14 @@ body {
 
 #slide7 .card {
    bottom: 200px;
+}
+
+#slide3 .card {
+   bottom: 200px;
+}
+
+#slide5 .card {
+   bottom: 150px;
 }
 
 /* Headings inside card */
