@@ -39,8 +39,6 @@ body {
 }
 
 /* Slide-specific cards centered in the slide */
-#slide2 .card,
-#slide3 .card,
 #slide4 .card,
 #slide5 .card,
 #slide6 .card,
@@ -64,14 +62,14 @@ body {
   position: absolute;
   bottom: 40px;
   left: 40px;
-  background: rgba(255, 255, 255, 0.342); /* transparent with slight glass effect */
+  background: rgba(255, 255, 255, 0.473); /* transparent with slight glass effect */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   padding: 2rem;
   border-radius: 20px;
   max-width: 480px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-  color: #001986;
+  box-shadow: 0 8px 30px rgba(11, 13, 58, 1);
+  color: #000000;
   text-align: left;
   z-index: 10; /* ensure it’s on top */
 }
@@ -101,6 +99,12 @@ body {
 #slide5 .card {
    bottom: 150px;
 }
+
+.highlight-word {
+  color: #b27c48; /* or your desired color */
+  font-weight: bold; /* optional */
+}
+
 
 /* Headings inside card */
 .card h1,
@@ -187,12 +191,12 @@ body {
 
 .slide::before {
   top: 0;
-  background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+  background: linear-gradient(to bottom, rgb(11, 13, 58), transparent);
 }
 
 .slide::after {
   bottom: 0;
-  background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+  background: linear-gradient(to top, rgb(11, 13, 58), transparent);
 }
 
 /* Logo positioning */
@@ -241,3 +245,5 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
