@@ -22,8 +22,6 @@
     <a href="#slide4" class="dot"></a>
     <a href="#slide5" class="dot"></a>
     <a href="#slide6" class="dot"></a>
-    <a href="#slide7" class="dot"></a>
-    <a href="#slide8" class="dot"></a>
   </div>
 
   <!-- Slide 1 -->
@@ -61,65 +59,43 @@
   </section>
 
   <!-- Slide 4 -->
-  <section class="slide" id="slide4" style="background-image: url('images/slide4.png.png')">
-    <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
-    <div class="card">
-      <h2>Better Than the Rest</h2>
-      <p>
-        Compared to:<br><br>
-        ❌ Glass: (heavier, weaker, not recyclable)<br><br>
-        ❌ Carbon: (brittle, flammable, high CO₂)<br><br>
-        ✅ TENRON®: (strong, safe, sustainable)
-      </p>
-    </div>
-  </section>
+  <section class="slide motto-slide" id="slide4">
+  <div class="motto-wrapper">
+    <h1 class="motto-word">SAFER.</h1>
+    <h1 class="motto-word">STRONGER.</h1>
+    <h1 class="motto-word">FASTER.</h1>
+  </div>
+</section>
+
 
   <!-- Slide 5 -->
-  <section class="slide" id="slide5" style="background-image: url('images/slide5.png.png')">
-    <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
-    <div class="card">
-      <h2>Used in the Real World</h2>
-      <p>
-        Trusted by Airbus.<br><br>
-        Built into racing boats, luxury yachts, and the OPEN60AAL Arctic vessel.<br><br>
-        TENRON® performs where others fail.
-      </p>
+<section class="slide slide5" id="slide5" style="background-image: url('images/slide5.png.png');">
+    <div class="special">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      <h3>Already in flight.</h3>
+      <p>Trusted by Airbus.</p>
+      <br>
+      <h3>Already at sea.</h3>
+      <p>Built into Arctic-class vessels.</p>
+      <br>
+      <h3>Already proven.</h3>
+      <p>Used where failure isn’t an option.</p>
     </div>
-  </section>
-
-  <!-- Slide 6 -->
-  <section class="slide" id="slide6" style="background-image: url('images/slide6.png.png')">
-    <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
-    <div class="card">
-      <h2>Sustainable by Design</h2>
-      <p>
-        ♻️ Made with wind energy<br>
-        ♻️ Fully recyclable to original strength<br>
-        ♻️ Low CO₂ footprint – 10× lower than carbon<br>
-        ♻️ Built in Western Europe, REACH compliant
-      </p>
-    </div>
-  </section>
-
-  <!-- Slide 7 -->
-  <section class="slide" id="slide7" style="background-image: url('images/slide7.png.png')">
-    <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
-    <div class="card">
-      <h2>Who is TENRON® For?</h2>
-      <p>
-        🚤 Luxury yachts – comfort, fire safety<br>
-        ⛵ Racing boats – shock resistance, speed<br>
-        🌊 Standard boats – durability, same cost
-      </p>
-    </div>
-  </section>
+</section>
 
   <!-- Slide 8 -->
-  <section class="slide" id="slide8" style="background-image: url('images/slide8.png.png')">
+  <section class="slide" id="slide6" style="background-image: url('images/slide8.png.png')">
     <img src="images/logo.png.png" alt="TENRON Logo" class="logo">
     <div class="card">
-      <h2>Want to know more?</h2>
-      <p>Explore technical specs, datasheets, and performance data at:</p>
+      <p style="font-size: xx-large;"><span class="highlight-word"> TENRON®</span></p>
+      <p style="font-size: medium;">Safer. Stronger. Faster.</p>
+      <br>
       <a href="https://www.isomatex.com" target="_blank" class="cta-button">www.isomatex.com</a>
     </div>
   </section>
@@ -169,6 +145,30 @@
     loader.classList.add('fade-out');
   });
 </script>
+
+<script>
+  const mottoSlide = document.querySelector('#slide4');
+  const mottoWords = mottoSlide.querySelectorAll('.motto-word');
+
+  const mottoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        mottoWords.forEach((word, index) => {
+          setTimeout(() => {
+            word.classList.add('visible');
+          }, index * 300);
+        });
+      } else {
+        mottoWords.forEach(word => {
+          word.classList.remove('visible');
+        });
+      }
+    });
+  }, { threshold: 0.5 });
+
+  mottoObserver.observe(mottoSlide);
+</script>
+
 
 
 </body>
